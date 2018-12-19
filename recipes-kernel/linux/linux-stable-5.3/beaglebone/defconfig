@@ -3055,6 +3055,9 @@ CONFIG_USB_DWC3_OF_SIMPLE=m
 #
 # CONFIG_USB_SERIAL is not set
 
+# Met One 83000
+CONFIG_USB_SERIAL_CP210X=y
+
 #
 # USB Miscellaneous drivers
 #
