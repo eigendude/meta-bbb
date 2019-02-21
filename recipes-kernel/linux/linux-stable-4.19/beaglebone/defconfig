@@ -2817,6 +2817,14 @@ CONFIG_USB_SERIAL_FTDI_SIO=y
 # Met One 83000
 CONFIG_USB_SERIAL_CP210X=y
 
+# Enable USB Prolific 2303 Single Port Serial Driver
+#
+# Required by the following hardware:
+#
+#   - GlobalSat BU-353-S4 USB GPS Receiver
+#
+CONFIG_USB_SERIAL_PL2303=y
+
 #
 # USB Miscellaneous drivers
 #
