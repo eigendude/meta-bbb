@@ -1,0 +1,43 @@
+From 9ea43b4a7b31c33de27336d8ad292cb2f8d7c7c1 Mon Sep 17 00:00:00 2001
+From: Garrett Brown <garrett.brown@aclima.io>
+Date: Wed, 6 Mar 2019 14:17:47 -0800
+Subject: [PATCH] dts: Add uart2 node on BeagleBone Black
+
+---
+ arch/arm/boot/dts/am335x-boneblack-common.dtsi | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack-common.dtsi b/arch/arm/boot/dts/am335x-boneblack-common.dtsi
+index e543c2bee8c2..24485865351b 100644
+--- a/arch/arm/boot/dts/am335x-boneblack-common.dtsi
++++ b/arch/arm/boot/dts/am335x-boneblack-common.dtsi
+@@ -28,6 +28,13 @@
+ };
+ 
+ &am33xx_pinmux {
++	uart2_pins: uart2_pins {
++		pinctrl-single,pins = <
++			AM33XX_IOPAD(0x950, PIN_INPUT | MUX_MODE1)	/* spi0_sclk.uart2_rxd */
++			AM33XX_IOPAD(0x954, PIN_OUTPUT | MUX_MODE1)	/* spi0_d0.uart2_txd */
++		>;
++	};
++
+ 	nxp_hdmi_bonelt_pins: nxp_hdmi_bonelt_pins {
+ 		pinctrl-single,pins = <
+ 			AM33XX_IOPAD(0x9b0, PIN_OUTPUT_PULLDOWN | MUX_MODE3)	/* xdma_event_intr0 */
+@@ -71,6 +78,12 @@
+ 	};
+ };
+ 
++&uart2 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&uart2_pins>;
++	status = "okay";
++};
++
+ &lcdc {
+ 	status = "okay";
+ 
+-- 
+2.17.1
+
