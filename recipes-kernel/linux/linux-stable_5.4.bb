@@ -25,6 +25,5 @@ SRC_URI = " \
     git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;branch=linux-${LINUX_VERSION}.y \
     file://defconfig \
     file://0001-spidev-Add-a-generic-compatible-id.patch \
-    file://0002-dts-Remove-bbb-cape-i2c-definitions.patch \
     file://0003-wlcore-Change-NO-FW-RX-BA-session-warnings-to-debug.patch \
 "
