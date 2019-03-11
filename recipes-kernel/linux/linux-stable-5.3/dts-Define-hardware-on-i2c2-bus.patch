@@ -1,0 +1,67 @@
+From 0c14c6bdf9ca44b347b9ec5d4d63da4863a9f97c Mon Sep 17 00:00:00 2001
+From: Garrett Brown <garrett.brown@aclima.io>
+Date: Tue, 5 Mar 2019 20:23:13 -0800
+Subject: [PATCH] dts: Define hardware on i2c2 bus
+
+---
+ arch/arm/boot/dts/am335x-bone-common.dtsi | 37 ++++-------------------
+ 1 file changed, 6 insertions(+), 31 deletions(-)
+
+diff --git a/arch/arm/boot/dts/am335x-bone-common.dtsi b/arch/arm/boot/dts/am335x-bone-common.dtsi
+index 9e5e75ea87f5..b6a501e4d05f 100644
+--- a/arch/arm/boot/dts/am335x-bone-common.dtsi
++++ b/arch/arm/boot/dts/am335x-bone-common.dtsi
+@@ -256,44 +256,19 @@
+ 	status = "okay";
+ 	clock-frequency = <100000>;
+ 
+-	cape_eeprom0: cape_eeprom0@54 {
++	powerboard_eeprom: powerboard_eeprom@50 {
+ 		compatible = "atmel,24c256";
+-		reg = <0x54>;
+-		#address-cells = <1>;
+-		#size-cells = <1>;
+-		cape0_data: cape_data@0 {
+-			reg = <0 0x100>;
+-		};
+-	};
+-
+-	cape_eeprom1: cape_eeprom1@55 {
+-		compatible = "atmel,24c256";
+-		reg = <0x55>;
+-		#address-cells = <1>;
+-		#size-cells = <1>;
+-		cape1_data: cape_data@0 {
+-			reg = <0 0x100>;
+-		};
+-	};
+-
+-	cape_eeprom2: cape_eeprom2@56 {
+-		compatible = "atmel,24c256";
+-		reg = <0x56>;
++		reg = <0x50>;
+ 		#address-cells = <1>;
+ 		#size-cells = <1>;
+-		cape2_data: cape_data@0 {
++		powerboard_data: powerboard_data@0 {
+ 			reg = <0 0x100>;
+ 		};
+ 	};
+ 
+-	cape_eeprom3: cape_eeprom3@57 {
+-		compatible = "atmel,24c256";
+-		reg = <0x57>;
+-		#address-cells = <1>;
+-		#size-cells = <1>;
+-		cape3_data: cape_data@0 {
+-			reg = <0 0x100>;
+-		};
++	powerboard_rtc: powerboard_rtc@68 {
++		compatible = "st,m41t82";
++		reg = <0x68>;
+ 	};
+ };
+ 
+-- 
+2.17.1
+
