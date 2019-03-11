@@ -28,4 +28,5 @@ SRC_URI = " \
     file://0002-dts-Remove-bbb-cape-i2c-definitions.patch \
     file://0003-wlcore-Change-NO-FW-RX-BA-session-warnings-to-debug.patch \
     file://dts-Define-hardware-on-i2c2-bus.patch \
+    file://dts-Add-uart2-node-on-BeagleBone-Black.patch \
 "
