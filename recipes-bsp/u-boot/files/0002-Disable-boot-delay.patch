@@ -1,0 +1,21 @@
+From 48106ffe263ac4f7898c980f471e3185df72d8a2 Mon Sep 17 00:00:00 2001
+From: Garrett Brown <garrett.brown@aclima.io>
+Date: Fri, 5 Apr 2019 16:20:38 -0700
+Subject: [PATCH] Disable-boot-delay
+
+---
+ configs/am335x_boneblack_defconfig | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/configs/am335x_boneblack_defconfig b/configs/am335x_boneblack_defconfig
+index 63675f0dba..ef5ef5ca47 100644
+--- a/configs/am335x_boneblack_defconfig
++++ b/configs/am335x_boneblack_defconfig
+@@ -40,3 +40,4 @@ CONFIG_OMAP3_SPI=y
+ # CONFIG_USB is not set
+ CONFIG_LZO=y
+ CONFIG_OF_LIBFDT=y
++CONFIG_BOOTDELAY=0
+-- 
+2.17.1
+
