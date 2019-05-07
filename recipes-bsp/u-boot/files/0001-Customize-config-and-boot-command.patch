@@ -1,21 +1,20 @@
-From e71ef3f265fbbdb67e99d51f784838609e46e2ad Mon Sep 17 00:00:00 2001
+From 14c0f3ffe04ccd21cb649b067cef766e69959a45 Mon Sep 17 00:00:00 2001
 From: Scott Ellis <scott@jumpnowtek.com>
 Date: Mon, 6 May 2019 05:31:04 -0400
 Subject: [PATCH] Customize config and boot command
 
 ---
- configs/am335x_boneblack_defconfig | 46 ++++++++++++++++----------------------
- 1 file changed, 19 insertions(+), 27 deletions(-)
+ configs/am335x_boneblack_vboot_defconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/configs/am335x_boneblack_defconfig b/configs/am335x_boneblack_defconfig
-index 439d0cb..b5d1c75 100644
---- a/configs/am335x_boneblack_defconfig
-+++ b/configs/am335x_boneblack_defconfig
-@@ -4,14 +4,14 @@ CONFIG_TI_COMMON_CMD_OPTIONS=y
- CONFIG_AM33XX=y
- CONFIG_SPL=y
- CONFIG_DISTRO_DEFAULTS=y
--CONFIG_SYS_EXTRA_OPTIONS="EMMC_BOOT"
+diff --git a/configs/am335x_boneblack_vboot_defconfig b/configs/am335x_boneblack_vboot_defconfig
+index 6afda72453..f3e98a654c 100644
+--- a/configs/am335x_boneblack_vboot_defconfig
++++ b/configs/am335x_boneblack_vboot_defconfig
+@@ -7,7 +7,7 @@ CONFIG_DISTRO_DEFAULTS=y
+ CONFIG_FIT_SIGNATURE=y
+ CONFIG_FIT_VERBOSE=y
+ CONFIG_SYS_EXTRA_OPTIONS="EMMC_BOOT"
 -CONFIG_BOOTCOMMAND="if test ${boot_fit} -eq 1; then run update_to_fit; fi; run findfdt; run init_console; run envboot; run distro_bootcmd"
 +# CONFIG_SYS_EXTRA_OPTIONS="EMMC_BOOT"
 +CONFIG_BOOTCOMMAND="run envboot; setenv mmcdev 1; run envboot; setenv mmcdev 0; run findfdt; run distro_bootcmd"
@@ -79,5 +78,5 @@ index 439d0cb..b5d1c75 100644
  CONFIG_LZO=y
  CONFIG_OF_LIBFDT=y
 -- 
-2.7.4
+2.20.1
 
