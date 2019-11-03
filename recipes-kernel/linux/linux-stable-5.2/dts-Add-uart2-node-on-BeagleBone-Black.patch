@@ -1,4 +1,4 @@
-From 9ea43b4a7b31c33de27336d8ad292cb2f8d7c7c1 Mon Sep 17 00:00:00 2001
+From f8bb8b43e088ca6f6fcbe78dc94473aaecf8b9c4 Mon Sep 17 00:00:00 2001
 From: Garrett Brown <garrett.brown@aclima.io>
 Date: Wed, 6 Mar 2019 14:17:47 -0800
 Subject: [PATCH] dts: Add uart2 node on BeagleBone Black
@@ -8,10 +8,10 @@ Subject: [PATCH] dts: Add uart2 node on BeagleBone Black
  1 file changed, 13 insertions(+)
 
 diff --git a/arch/arm/boot/dts/am335x-boneblack-common.dtsi b/arch/arm/boot/dts/am335x-boneblack-common.dtsi
-index e543c2bee8c2..24485865351b 100644
+index 7ad079861efd..0f83cf702c1b 100644
 --- a/arch/arm/boot/dts/am335x-boneblack-common.dtsi
 +++ b/arch/arm/boot/dts/am335x-boneblack-common.dtsi
-@@ -28,6 +28,13 @@
+@@ -25,6 +25,13 @@
  };
  
  &am33xx_pinmux {
@@ -24,8 +24,8 @@ index e543c2bee8c2..24485865351b 100644
 +
  	nxp_hdmi_bonelt_pins: nxp_hdmi_bonelt_pins {
  		pinctrl-single,pins = <
- 			AM33XX_IOPAD(0x9b0, PIN_OUTPUT_PULLDOWN | MUX_MODE3)	/* xdma_event_intr0 */
-@@ -71,6 +78,12 @@
+ 			AM33XX_PADCONF(AM335X_PIN_XDMA_EVENT_INTR0, PIN_OUTPUT_PULLDOWN, MUX_MODE3)
+@@ -68,6 +75,12 @@
  	};
  };
  
@@ -39,5 +39,5 @@ index e543c2bee8c2..24485865351b 100644
  	status = "okay";
  
 -- 
-2.17.1
+2.20.1
 
