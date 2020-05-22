@@ -20,5 +20,20 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&i2c2_pins>;
 	clock-frequency = <100000>;
+
+	powerboard_eeprom: powerboard_eeprom@50 {
+		compatible = "atmel,24c256";
+		reg = <0x50>;
+		#address-cells = <1>;
+		#size-cells = <1>;
+		powerboard_data: powerboard_data@0 {
+			reg = <0 0x100>;
+		};
+	};
+
+	powerboard_rtc: powerboard_rtc@68 {
+		compatible = "st,m41t82";
+		reg = <0x68>;
+	};
 };
 
