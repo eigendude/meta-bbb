@@ -438,7 +438,8 @@ CONFIG_KEXEC=y
 CONFIG_ATAGS_PROC=y
 # CONFIG_CRASH_DUMP is not set
 CONFIG_AUTO_ZRELADDR=y
-# CONFIG_EFI is not set
+CONFIG_EFI=y
+CONFIG_EFI_STUB=y
 # end of Boot options
 
 #
