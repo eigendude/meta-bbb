@@ -1,0 +1,19 @@
+commit ede662dca3875052d47c43e1cb51c23fc96a30a1
+Author: Jeff Pao <jeff.pao@aclima.io>
+Date:   Thu Oct 15 14:05:01 2020 -0700
+
+    [PATCH] DTS: Add i2c2 and uart2 to BeagleBone Black
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack.dts b/arch/arm/boot/dts/am335x-boneblack.dts
+index d3928662aed4..0c587a33861c 100644
+--- a/arch/arm/boot/dts/am335x-boneblack.dts
++++ b/arch/arm/boot/dts/am335x-boneblack.dts
+@@ -7,6 +7,8 @@
+ #include "am33xx.dtsi"
+ #include "am335x-bone-common.dtsi"
+ #include "am335x-boneblack-common.dtsi"
++#include "bbb-i2c2.dtsi"
++#include "bbb-uart2.dtsi"
+ 
+ / {
+ 	model = "TI AM335x BeagleBone Black";
