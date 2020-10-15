@@ -37,6 +37,7 @@ SRC_URI = " \
     file://0001-spidev-Add-a-generic-compatible-id.patch \
     file://0002-dts-Remove-bbb-cape-i2c-definitions.patch \
     file://0003-wlcore-Change-NO-FW-RX-BA-session-warnings-to-debug.patch \
+    file://0004-dts-Add-bbb-files-for-i2c2-and-uart2.patch \
     \
     file://bbb-dcan0.dtsi \
     file://bbb-dcan1.dtsi \
