@@ -1,2 +1,2 @@
-UBOOT_SUFFIX = "img"
-SPL_BINARY = "MLO"
+UBOOT_SUFFIX_beaglebone = "img"
+SPL_BINARY_beaglebone = "MLO"
