@@ -6,4 +6,9 @@ LIC_FILES_CHKSUM ?= "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 
 DEPENDS += "bc-native bison-native openssl-native util-linux-native xz-native"
 
+# Needed for bitbake -c menuconfig linux-stable
+DEPENDS += " \
+    ncurses-native \
+"
+
 inherit kernel
