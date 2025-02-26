@@ -1,11 +1,11 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/arm 5.10.13 Kernel Configuration
+# Linux/arm 5.10.19 Kernel Configuration
 #
-CONFIG_CC_VERSION_TEXT="arm-poky-linux-gnueabi-gcc (GCC) 10.2.0"
+CONFIG_CC_VERSION_TEXT="arm-sundstrom-linux-gnueabi-gcc (GCC) 9.2.0"
 CONFIG_CC_IS_GCC=y
-CONFIG_GCC_VERSION=100200
-CONFIG_LD_VERSION=235010000
+CONFIG_GCC_VERSION=90200
+CONFIG_LD_VERSION=232000000
 CONFIG_CLANG_VERSION=0
 CONFIG_LLD_VERSION=0
 CONFIG_CC_HAS_ASM_GOTO=y
@@ -629,7 +629,6 @@ CONFIG_ARCH_HAS_GCOV_PROFILE_ALL=y
 # end of GCOV-based kernel profiling
 
 CONFIG_HAVE_GCC_PLUGINS=y
-# CONFIG_GCC_PLUGINS is not set
 # end of General architecture-dependent options
 
 CONFIG_RT_MUTEXES=y
